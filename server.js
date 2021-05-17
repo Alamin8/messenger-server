@@ -10,8 +10,8 @@ import mongoMesseges from './messegeModel.js'
 
 // app config
 const app = express()
-// const port = process.env.PORT || 9000
-const port ='https://limitless-thicket-40874.herokuapp.com'
+const port = process.env.PORT || 9000
+
 
 const pusher = new Pusher({
     appId: "1204665",
@@ -73,5 +73,8 @@ app.get('/retrieve/conversation',(req, res)=>{
 })
 
 //listen
-// app.listen(port, () => console.log(`listening on localhost:${port}`))
-app.listen(port)
+app.listen(port, () => console.log(`listening on localhost:${port}`))
+
+
+// command ==== nodemon
+// heroku diploy link: https://limitless-thicket-40874.herokuapp.com
